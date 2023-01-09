@@ -111,20 +111,20 @@
         {
             "image": "13.jpeg",
             "id": 13,
-            "inStock": "67",
-            "brandName": "Symphony",
-            "modelName": "Symphony RT34i",
-            "config": "HD 70GB SD 560Gb RAM 453GB ROM 453GB",
-            "price": "32500"
+            "inStock": "",
+            "brandName": "",
+            "modelName": "",
+            "config": "",
+            "price": ""
         },
         {
-            "brandName": "LG Smart87M",
-            "modelName": "Ai564",
-            "price": 54000,
-            "config": "HD 45GB, RAM 4GB, ROM 8GB",
+            "brandName": "",
+            "modelName": "",
+            "price": "50000",
+            "config": "",
             "image": "14.jpeg",
             "id": 14,
-            "inStock": 20
+            "inStock": "50"
         }
     ]
 }

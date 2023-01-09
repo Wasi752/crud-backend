@@ -74,7 +74,17 @@ app.put('/:id', (req, res) => {
     })
 })
 app.delete('/:id', (req, res) => {
-    res.send('Delete Mobile Data by ID')
+    fs.readFile("mobileData", 'utf8', (err, data) => {
+        const allData = JSON.parse(data)
+        const mobileInfoByID = allData.mobileData.find(x => x.id == req.params.id);
+        // mobileInfoByID.brandName = req.body.brandName;
+        // mobileInfoByID.modelName = req.body.modelName;
+        // mobileInfoByID.config = req.body.config;
+        mobileInfoByID.price = req.body.price;
+        mobileInfoByID.inStock = req.body.inStock;
+        fs.writeFile("mobileData", JSON.stringify(allData), () => { })
+        res.send(JSON.stringify(mobileInfoByID))
+    })
 })
 
 app.listen(port, () => {
