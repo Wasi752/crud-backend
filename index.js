@@ -18,10 +18,14 @@ app.use(cors({
 
 
 app.get('/', (req, res) => {
-    res.send('Get All Mobiles')
-})
+    fs.readFile('mobileData', 'utf8', (err, data) => {
+        const allData = JSON.parse(data)
+        res.send(JSON.stringify(allData.mobileData));
+    });
+});
+
 app.get('/:id', (req, res) => {
-    res.send('Get a Mobile by ID')
+    res.send('Get a Mobile Data by ID')
 })
 app.post('/',
     check('price')
@@ -57,7 +61,17 @@ app.post('/',
         });
     });
 app.put('/:id', (req, res) => {
-    res.send('Update Mobile Data by ID')
+    fs.readFile("mobileData", 'utf8', (err, data) => {
+        const allData = JSON.parse(data)
+        const mobileInfoByID = allData.mobileData.find(x => x.id == req.params.id);
+        mobileInfoByID.brandName = req.body.brandName;
+        mobileInfoByID.modelName = req.body.modelName;
+        mobileInfoByID.config = req.body.config;
+        mobileInfoByID.price = req.body.price;
+        mobileInfoByID.inStock = req.body.inStock;
+        fs.writeFile("mobileData", JSON.stringify(allData), () => { })
+        res.send(JSON.stringify(mobileInfoByID))
+    })
 })
 app.delete('/:id', (req, res) => {
     res.send('Delete Mobile Data by ID')
