@@ -1,0 +1,90 @@
+{
+    "mobileData": [
+        {
+            "brandName": "Vivo",
+            "modelName": "Vivo 327m",
+            "price": "20000",
+            "config": "HD 200, OS Aic, Rom 2gb s300",
+            "image": "1.jpeg",
+            "model": "v",
+            "id": 1
+        },
+        {
+            "brandName": "Sumsang",
+            "modelName": "Sumsang 327m",
+            "price": "20000",
+            "config": "HD 200, OS Aic, Rom 2gb s300",
+            "image": "2.jpeg",
+            "model": "v",
+            "id": 2
+        },
+        {
+            "brandName": "iPhone",
+            "modelName": "iphone 327m",
+            "price": "20000",
+            "config": "HD 200, OS Aic, Rom 2gb s300",
+            "image": "3.jpeg",
+            "model": "v",
+            "id": 3
+        },
+        {
+            "brandName": "Nokia",
+            "modelName": "Npkia 327m",
+            "price": "20000",
+            "config": "HD 200, OS Aic, Rom 2gb s300",
+            "image": "4.jpeg",
+            "model": "v",
+            "id": 4
+        },
+        {
+            "brandName": "Ninza",
+            "modelName": "Ninza 327m",
+            "price": "10000",
+            "config": "HD 200, OS Aic, Rom 2gb s300",
+            "image": "5.jpeg",
+            "model": "v",
+            "id": 5
+        },
+        {
+            "brandName": "Shawmi",
+            "modelName": "Shawmi i327m",
+            "price": "15000",
+            "config": "HD 200, OS Aic, Rom 2gb s300",
+            "image": "6.jpeg",
+            "model": "v",
+            "id": 6
+        },
+        {
+            "brandName": "Google",
+            "modelName": "Google u453R",
+            "price": "12367",
+            "config": "HD 30, Rom 500GB, Ram 2GB",
+            "image": "7.jpeg",
+            "id": 7
+        },
+        {
+            "brandName": "Yahoo",
+            "modelName": "Yahoo i4532T",
+            "price": "34527",
+            "config": "HD 350GB, RAM 4Gb, Rom 45Gb",
+            "image": "8.jpeg",
+            "id": 8
+        },
+        {
+            "brandName": "Nokia ",
+            "modelName": "iPhone",
+            "price": "40000",
+            "config": "sd 400GB Ram 4 Gb Rom 45Gb",
+            "image": "9.jpeg",
+            "id": 9
+        },
+        {
+            "brandName": "Google",
+            "modelName": "Google Phone",
+            "price": "80000",
+            "config": "dse vfdrt vfdrt mjkhu mkj",
+            "image": "10.jpeg",
+            "id": 10
+        }
+    ]
+}
