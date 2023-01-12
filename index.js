@@ -25,7 +25,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/:id', (req, res) => {
-    res.send('Get a Mobile Data by ID')
+    fs.readFile('mobileData', 'utf8', (err, data) => {
+        const allData = JSON.parse(data)
+        const mobileDataByID = allData.mobileData.filter(x => x.id == req.params.id)[0];
+        res.send(JSON.stringify(mobileDataByID));
+    });
 })
 app.post('/',
     check('price')
@@ -52,7 +56,7 @@ app.post('/',
             const reqData = req.body;
             const rawImageString = reqData.image.replace(/^data:image\/jpeg;base64,/, "");
             const buffer = Buffer.from(rawImageString, "base64");
-            reqData.id = allData.mobileData.length + 1;
+            reqData.id = Math.floor((Math.random() * 100000) + 1);
             fs.writeFile(`public/mobilePicture/${reqData.id}.jpeg`, buffer, () => { });
             reqData.image = `${reqData.id}.jpeg`;
             allData.mobileData.push(reqData);
@@ -76,16 +80,9 @@ app.put('/:id', (req, res) => {
 app.delete('/:id', (req, res) => {
     fs.readFile("mobileData", 'utf8', (err, data) => {
         const allData = JSON.parse(data)
-        const mobileInfoByID = allData.mobileData.find(x => x.id == req.params.id);
-        mobileInfoByID.brandName = req.body.brandName;
-        mobileInfoByID.modelName = req.body.modelName;
-        mobileInfoByID.config = req.body.config;
-        mobileInfoByID.price = req.body.price;
-        mobileInfoByID.inStock = req.body.inStock;
-        mobileInfoByID.image = req.body.image;
-        mobileInfoByID.id = req.body.id;
+        allData.mobileData = allData.mobileData.filter(x => x.id != req.params.id);
         fs.writeFile("mobileData", JSON.stringify(allData), () => { })
-        res.send(JSON.stringify(mobileInfoByID))
+        res.status(204).send()
     })
 })
 
