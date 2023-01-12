@@ -1,12 +1,12 @@
 {
     "mobileData": [
         {
-            "brandName": "Apple",
-            "modelName": "IPhone t78",
-            "price": "78000",
-            "config": "HD 34GB sd 256 RAM 56GB ROM 34MB",
+            "brandName": "TelNok",
+            "modelName": "TelNok i7",
+            "price": "78906",
+            "config": "sderthuyj bnhjuyti nhjuyi mkjhu",
             "image": "1.jpeg",
-            "inStock": "89",
+            "inStock": "90",
             "id": 1
         },
         {
@@ -109,22 +109,22 @@
             "inStock": 20
         },
         {
+            "brandName": "Google",
+            "modelName": "My Google 67",
+            "config": "HD 345 SD 564GB RAM 45Gb ROM 543MB",
+            "price": "67580",
             "image": "13.jpeg",
             "id": 13,
-            "inStock": "",
-            "brandName": "",
-            "modelName": "",
-            "config": "",
-            "price": ""
+            "inStock": "67"
         },
         {
-            "brandName": "",
-            "modelName": "",
-            "price": "50000",
-            "config": "",
-            "image": "14.jpeg",
-            "id": 14,
-            "inStock": "50"
+            "brandName": "TelNok",
+            "modelName": "TelNok i7",
+            "price": "78906",
+            "config": "sderthuyj bnhjuyti nhjuyi mkjhu",
+            "image": "1.jpeg",
+            "inStock": "90",
+            "id": 1
         }
     ]
 }

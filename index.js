@@ -41,7 +41,7 @@ app.post('/',
         .withMessage('must be at least 4 chars long'),
     check('modelName')
         .isLength({ min: 5 })
-        .withMessage('must be exactly 4 digits long'),
+        .withMessage('must be at least 5 chars long'),
     (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
@@ -77,11 +77,13 @@ app.delete('/:id', (req, res) => {
     fs.readFile("mobileData", 'utf8', (err, data) => {
         const allData = JSON.parse(data)
         const mobileInfoByID = allData.mobileData.find(x => x.id == req.params.id);
-        // mobileInfoByID.brandName = req.body.brandName;
-        // mobileInfoByID.modelName = req.body.modelName;
-        // mobileInfoByID.config = req.body.config;
+        mobileInfoByID.brandName = req.body.brandName;
+        mobileInfoByID.modelName = req.body.modelName;
+        mobileInfoByID.config = req.body.config;
         mobileInfoByID.price = req.body.price;
         mobileInfoByID.inStock = req.body.inStock;
+        mobileInfoByID.image = req.body.image;
+        mobileInfoByID.id = req.body.id;
         fs.writeFile("mobileData", JSON.stringify(allData), () => { })
         res.send(JSON.stringify(mobileInfoByID))
     })
