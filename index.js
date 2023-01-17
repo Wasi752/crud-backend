@@ -56,7 +56,7 @@ app.post('/',
             const reqData = req.body;
             const rawImageString = reqData.image.replace(/^data:image\/jpeg;base64,/, "");
             const buffer = Buffer.from(rawImageString, "base64");
-            reqData.id = Math.floor((Math.random() * 100000) + 1);
+            reqData.id = Math.floor((Math.random() * 100000) + 1); //allData.mobileData.length + 1;
             fs.writeFile(`public/mobilePicture/${reqData.id}.jpeg`, buffer, () => { });
             reqData.image = `${reqData.id}.jpeg`;
             allData.mobileData.push(reqData);
